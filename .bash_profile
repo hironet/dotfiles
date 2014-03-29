@@ -18,15 +18,17 @@ if [ -d ${HOME}/bin ]; then
     export PATH=$PATH:$HOME/bin
 fi
 
-if [ -d ${HOME}/.rbenv/bin ]; then
-    export PATH=${HOME}/.rbenv/bin:$PATH
-    eval "$(rbenv init -)"
-fi
-
 if [ -d /opt/chef/embedded/bin ]; then
     export PATH=/opt/chef/embedded/bin:$PATH
 fi
 
 if [ -d /Applications/MacVim.app/Contents/MacOS ]; then
     export PATH=/Applications/MacVim.app/Contents/MacOS:$PATH
+fi
+
+export RBENV_ROOT=/usr/local/var/rbenv
+export RUBY_CONFIGURE_OPTS="--with-readline-dir=`brew --prefix readline` --with-openssl-dir=`brew --prefix openssl`"
+
+if which rbenv > /dev/null; then
+  eval "$(rbenv init -)"
 fi
