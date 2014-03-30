@@ -1,4 +1,8 @@
-alias ls='gls --color=auto'
+if [ `which gls` ]; then
+    alias ls='gls --color=auto'
+else
+    alias ls='ls --color=auto'
+fi
 alias la='ls -A'
 alias ll='ls -Al'
 
