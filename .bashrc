@@ -1,4 +1,4 @@
-alias ls='ls -F'
+alias ls='gls --color=auto'
 alias la='ls -A'
 alias ll='ls -l'
 
