@@ -23,10 +23,10 @@ if [ -d /Applications/MacVim.app/Contents/MacOS ]; then
 fi
 
 export RBENV_ROOT=/usr/local/var/rbenv
-if [ `which brew` ]; then
+if [ `which brew` > /dev/null ]; then
     export RUBY_CONFIGURE_OPTS="--with-readline-dir=`brew --prefix readline` --with-openssl-dir=`brew --prefix openssl`"
 fi
 
-if [ `which rbenv` ]; then
+if [ `which rbenv` > /dev/null ]; then
     eval "$(rbenv init -)"
 fi
