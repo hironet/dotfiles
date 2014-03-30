@@ -1,8 +1,8 @@
-if [ `which gls > /dev/null 2>&1` ]; then
+if [ `which gls` ]; then
     alias ls='gls --color=auto'
 else
     alias ls='ls --color=auto'
-fi
+fi > /dev/null 2>&1
 alias la='ls -A'
 alias ll='ls -Al'
 
