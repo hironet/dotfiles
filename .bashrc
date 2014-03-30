@@ -1,6 +1,6 @@
 alias ls='gls --color=auto'
 alias la='ls -A'
-alias ll='ls -l'
+alias ll='ls -Al'
 
 alias cp='cp -i'
 alias mv='mv -i'
