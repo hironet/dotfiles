@@ -1,4 +1,4 @@
-if [ `which gls` > /dev/null ]; then
+if [ `which gls` > /dev/null 2>&1 ]; then
     alias ls='gls --color=auto'
 else
     alias ls='ls --color=auto'
