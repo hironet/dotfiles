@@ -7,11 +7,8 @@ set lines=48
 " ウィンドウの横幅を調整する "
 set columns=100
 
-" 背景色を暗くする "
-set background=dark
-
 " ウィンドウの透明度を調整する "
-set transparency=10
+set transparency=5
 
 " フォントを設定する "
 set guifont=Osaka-Mono:h13

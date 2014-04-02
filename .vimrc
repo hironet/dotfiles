@@ -25,6 +25,9 @@ syntax on
 " カラースキームを設定する "
 colorscheme hybrid
 
+" 背景色を暗くする "
+set background=dark
+
 " ステータスラインにファイル名、文字コード、改行コードを表示する "
 set statusline=%<%f\ %m%r%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l/%L,%v
 
