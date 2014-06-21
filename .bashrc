@@ -10,11 +10,7 @@ START_COLOR2='\[\e[${GREEN}m\]'
 END_COLOR='\[\e[0m\]'
 PS1="[${START_COLOR1}\u${END_COLOR}@${START_COLOR2}\h${END_COLOR} \W]\\$ "
 
-if [ `which gls` ]; then
-    alias ls='gls --color=auto'
-else
-    alias ls='ls'
-fi > /dev/null 2>&1
+alias ls='gls --color=auto'
 alias la='ls -A'
 alias ll='ls -Al'
 
