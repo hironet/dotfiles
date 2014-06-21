@@ -1,3 +1,4 @@
 .vim/
+.rbenv/
 id_rsa
 known_hosts
