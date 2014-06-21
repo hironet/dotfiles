@@ -2,10 +2,9 @@ if [ -d ${HOME}/bin ]; then
     export PATH=$PATH:$HOME/bin
 fi
 
-export RBENV_ROOT=/usr/local/rbenv
-if [ `which brew` ]; then
-    export RUBY_CONFIGURE_OPTS="--with-readline-dir=`brew --prefix readline` --with-openssl-dir=`brew --prefix openssl`"
-fi > /dev/null 2>&1
+if [ -d ${HOME}/.rbenv/bin ]; then
+    export PATH="$HOME/.rbenv/bin:$PATH"
+fi
 
 if [ `which rbenv` ]; then
     eval "$(rbenv init -)"
