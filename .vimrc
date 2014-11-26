@@ -1,29 +1,7 @@
 set nocompatible
 
-" ----------------------------------------------------------------------
-" NeoBundle
-
-filetype off
-
-if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
-
-call neobundle#rc(expand('~/.vim/bundle/'))
-
-filetype plugin on
-filetype indent on
-
-NeoBundle 'w0ng/vim-hybrid'
-NeoBundle 'altercation/vim-colors-solarized'
-
-" ----------------------------------------------------------------------
-
 " シンタックスハイライトを有効にする "
 syntax on
-
-" カラースキームを設定する "
-colorscheme hybrid
 
 " 背景色を暗くする "
 set background=dark
