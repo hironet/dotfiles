@@ -1,14 +1,7 @@
 [user]
 	name = hiroyuki1126
 	email = hiroyuki1126@gmail.com
-[credential]
-	helper = osxkeychain
 [core]
 	editor = vim
 [push]
 	default = simple
-[url "git@github.com:"]
-	pushInsteadOf = git://github.com/
-	pushInsteadOf = https://github.com/
-[url "git://github.com/"]
-	insteadOf = https://github.com/
