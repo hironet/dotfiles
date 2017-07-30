@@ -10,13 +10,16 @@ START_COLOR2='\[\e[${GREEN}m\]'
 END_COLOR='\[\e[0m\]'
 PS1="[${START_COLOR1}\u${END_COLOR}@${START_COLOR2}\h${END_COLOR} \W]\\$ "
 
-if [ `uname` = "Darwin" ]; then
-    alias la='ls -AFG'
-    alias ll='ls -AFGl'
-elif [ `uname` = "Linux" ]; then
-    alias la='ls -AF'
-    alias ll='ls -AFl'
-fi > /dev/null 2>&1
+case `uname` in
+    'Darwin')
+        alias la='ls -AFG'
+        alias ll='ls -AFGl'
+        ;;
+    'Linux')
+        alias la='ls -AF'
+        alias ll='ls -AFl'
+        ;;
+esac
 
 alias cp='cp -i'
 alias mv='mv -i'
