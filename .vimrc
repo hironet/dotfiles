@@ -9,6 +9,9 @@ set nobackup
 " スワップファイルを作らない "
 set noswapfile
 
+" UNDOファイルを作らない "
+set noundofile
+
 " 行番号を表示する "
 set number
 
