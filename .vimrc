@@ -1,3 +1,6 @@
+if &compatible
+  set nocompatible
+endif
 set autoindent
 set clipboard=unnamed
 set encoding=utf-8
@@ -6,7 +9,6 @@ set formatoptions=q
 set laststatus=2
 set number
 set nobackup
-set nocompatible
 set noswapfile
 set noundofile
 set nowrapscan
