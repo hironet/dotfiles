@@ -19,6 +19,10 @@ case `uname` in
         alias la='ls -AF'
         alias ll='ls -AFl'
         ;;
+    'MSYS_NT-6.1')
+        alias la='ls -AF'
+        alias ll='ls -AFl'
+        ;;
 esac
 
 alias cp='cp -i'
