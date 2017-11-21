@@ -1,7 +1,7 @@
 [user]
-	name = hiroyuki1126
-	email = hiroyuki1126@gmail.com
+    name = "Hiroyuki Ishihara"
+    email = hiroyuki.1126@icloud.com
 [core]
-	editor = vim
+    editor = vim
 [push]
-	default = simple
+    default = simple
