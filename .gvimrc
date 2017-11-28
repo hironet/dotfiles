@@ -1,5 +1,5 @@
 if has("mac")
-  set lines=50
+  set lines=58
   set columns=120
 elseif has("win64") || has("win32")
   set guifont=MS_Gothic:h10
