@@ -2,8 +2,13 @@ if &compatible
   set nocompatible
 endif
 
-let s:dein_dir = expand('~/.cache/dein')
-let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
+if has('win64') || has('win32')
+  let s:dein_dir = 'C:\bin\dein'
+  let s:dein_repo_dir = s:dein_dir . '\repos\github.com\Shougo\dein.vim'
+else
+  let s:dein_dir = expand('~/.cache/dein')
+  let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
+endif
 
 if !isdirectory(s:dein_repo_dir)
   call system('git clone https://github.com/Shougo/dein.vim ' . shellescape(s:dein_repo_dir))
@@ -19,10 +24,15 @@ if dein#load_state(s:dein_dir)
     call dein#add('roxma/nvim-yarp')
     call dein#add('roxma/vim-hug-neovim-rpc')
   endif
-  call dein#add('nathanaelkane/vim-indent-guides')
-  call dein#add('scrooloose/nerdtree')
+
   call dein#add('tomasr/molokai')
+  call dein#add('scrooloose/nerdtree')
+  call dein#add('Yggdroot/indentLine')
   call dein#add('tpope/vim-endwise')
+
+  " for Markdown
+  call dein#add('kannokanno/previm')
+  call dein#add('tyru/open-browser.vim')
 
   call dein#end()
   call dein#save_state()
@@ -47,11 +57,14 @@ set nowrapscan
 set statusline=%<%f\ %m%r%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l/%L,%v
 set tw=0
 
-" for nathanaelkane/vim-indent-guides 
-let g:indent_guides_enable_on_vim_startup = 1
-
 " for scrooloose/nerdtree
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
+
+" for tyru/open-browser.vim
+nnoremap <silent><C-m> :PrevimOpen<CR>
+
+" for Yggdroot/indentLine
+let g:indentLine_setColors = 100
 
 colorscheme molokai
 filetype plugin indent on
