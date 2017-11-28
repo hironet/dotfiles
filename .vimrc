@@ -2,7 +2,7 @@ if &compatible
   set nocompatible
 endif
 
-if has('win64') || has('win32')
+if has('win32')
   let s:dein_dir = 'C:\bin\dein'
   let s:dein_repo_dir = s:dein_dir . '\repos\github.com\Shougo\dein.vim'
 else
