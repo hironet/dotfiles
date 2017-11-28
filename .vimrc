@@ -42,20 +42,34 @@ if dein#check_install()
   call dein#install()
 endif
 
-set autoindent
-set clipboard=unnamed
-set encoding=utf-8
-set expandtab
-set fileencoding=utf-8
-set formatoptions=q
-set laststatus=2
-set number
 set nobackup
 set noswapfile
 set noundofile
-set nowrapscan
+
+set autoindent
+set expandtab
+
+set encoding=utf-8
+set fileencoding=utf-8
+
+set textwidth=0
+set formatoptions=q
+
+set number
+set laststatus=2
 set statusline=%<%f\ %m%r%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l/%L,%v
-set tw=0
+
+set ignorecase
+set nowrapscan
+set clipboard=unnamed
+
+if has("win32")
+  set fileformat=dos
+  set fileformats=dos,unix,mac
+else
+  set fileformat=unix
+  set fileformats=unix,mac,dos
+endif
 
 " for scrooloose/nerdtree
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
