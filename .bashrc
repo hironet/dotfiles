@@ -1,14 +1,14 @@
-RED='1;31'
-GREEN='1;32'
-BLUE='1;34'
+red='1;31'
+green='1;32'
+blue='1;34'
 if [ `whoami` == 'root' ]; then
-    START_COLOR1='\[\e[${RED}m\]'
+    start_color1='\[\e[${red}m\]'
 else
-    START_COLOR1='\[\e[${BLUE}m\]'
+    start_color1='\[\e[${blue}m\]'
 fi
-START_COLOR2='\[\e[${GREEN}m\]'
-END_COLOR='\[\e[0m\]'
-PS1="[${START_COLOR1}\u${END_COLOR}@${START_COLOR2}\h${END_COLOR} \W]\\$ "
+start_color2='\[\e[${green}m\]'
+end_color='\[\e[0m\]'
+PS1="[${start_color1}\u${end_color}@${start_color2}\h${end_color} \W]\\$ "
 
 case `uname` in
     'Darwin')
