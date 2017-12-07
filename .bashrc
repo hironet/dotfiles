@@ -18,7 +18,7 @@ case `uname` in
         alias la='ls -AFG'
         alias ll='ls -AFGl'
         ;;
-    'Linux' | 'MSYS_NT-6.1')
+    'Linux')
         alias la='ls -AF'
         alias ll='ls -AFl'
         ;;
