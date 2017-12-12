@@ -53,7 +53,6 @@ set shiftwidth=4
 set expandtab
 set autoindent
 set smartindent
-
 augroup fileTypeIndent
   autocmd!
   autocmd BufNewFile,BufRead *.rb setlocal tabstop=2 softtabstop=2 shiftwidth=2
@@ -61,7 +60,6 @@ augroup END
 
 set encoding=utf-8
 set fileencoding=utf-8
-
 if has("win32")
   set fileformat=dos
   set fileformats=dos,unix,mac
