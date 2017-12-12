@@ -11,19 +11,23 @@ set_prompt_color() {
     end_color='\[\e[0m\]'
     PS1="[${start_color1}\u${end_color}@${start_color2}\h${end_color} \W]\\$ "
 }
+
+set_alias() {
+    case `uname` in
+        'Darwin')
+            alias la='ls -AFG'
+            alias ll='ls -AFGl'
+            ;;
+        'Linux')
+            alias la='ls -AF'
+            alias ll='ls -AFl'
+            ;;
+    esac
+
+    alias cp='cp -i'
+    alias mv='mv -i'
+    alias rm='rm -i'
+}
+
 set_prompt_color
-
-case `uname` in
-    'Darwin')
-        alias la='ls -AFG'
-        alias ll='ls -AFGl'
-        ;;
-    'Linux')
-        alias la='ls -AF'
-        alias ll='ls -AFl'
-        ;;
-esac
-
-alias cp='cp -i'
-alias mv='mv -i'
-alias rm='rm -i'
+set_alias
