@@ -6,6 +6,9 @@ elseif has("win32")
   set guifontwide=MS_Gothic:h10
   set lines=53
   set columns=100
+  autocmd GUIEnter * set transparency=220
+  autocmd FocusGained * set transparency=220
+  autocmd FocusLost * set transparency=128
   colorscheme molokai
 endif
 
