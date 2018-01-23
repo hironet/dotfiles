@@ -8,12 +8,6 @@ case `uname` in
             eval "$(rbenv init -)"
         fi
         ;;
-    'Linux')
-        if [ -f ${HOME}/.rbenv/bin/rbenv ]; then
-            export PATH=${HOME}/.rbenv/bin:${PATH}
-            eval "$(rbenv init -)"
-        fi
-        ;;
 esac
 
 if [ -f ~/.bashrc ]; then
