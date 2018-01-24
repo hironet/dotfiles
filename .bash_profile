@@ -9,7 +9,7 @@ case `uname` in
         fi
         ;;
     'Linux')
-        if [ -f ${HOME}/.rbenv/bin/rbenv ]; then
+        if [ -d ${HOME}/.rbenv/bin ]; then
             export PATH=${HOME}/.rbenv/bin:${PATH}
             eval "$(rbenv init -)"
         fi
