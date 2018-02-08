@@ -16,6 +16,8 @@ case `uname` in
         ;;
 esac
 
+export HISTTIMEFORMAT="%F %T "
+
 if [ -f ~/.bashrc ]; then
     . ~/.bashrc
 fi
