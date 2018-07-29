@@ -16,4 +16,4 @@ esac
 
 export HISTTIMEFORMAT="%F %T "
 
-[ -f ~/.bashrc ] && . ~/.bashrc
+[ -f ${HOME}/.bashrc ] && . ${HOME}/.bashrc
