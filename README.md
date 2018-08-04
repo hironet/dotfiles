@@ -19,4 +19,4 @@ $ ./symlink.sh
     1. ファイル名を変更する。
         * .vimrc → _vimrc
         * .gvimrc → _gvimrc
-    1. 「C:\Users\ユーザ名」配下に「.gitconfig」を作成する。
+    1. 「C:\Users\ユーザ名」配下に「.gitconfig」を配置する。
