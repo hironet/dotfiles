@@ -1,6 +1,4 @@
-if [ -d ${HOME}/bin ]; then
-    export PATH="${PATH}:${HOME}/bin"
-fi
+[ -d ${HOME}/bin ] && export PATH="${PATH}:${HOME}/bin"
 
 case `uname` in
     'Darwin')
@@ -18,6 +16,4 @@ esac
 
 export HISTTIMEFORMAT="%F %T "
 
-if [ -f ~/.bashrc ]; then
-    . ~/.bashrc
-fi
+[ -f ${HOME}/.bashrc ] && . ${HOME}/.bashrc
