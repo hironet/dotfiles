@@ -14,9 +14,8 @@ $ ./symlink.sh
 ### Windowsの場合
 
 1. dotfilesの[ZIPファイル](https://github.com/hiroyuki1126/dotfiles/archive/master.zip)をダウンロードする。
-1. ダウンロードしたZIPファイルを解凍し、ファイルを適切な場所に配置する。
-1. vimを使用する場合は、以下を行う。
-    1. 「.gitconfig」を「C:\Users\ユーザ名」配下に配置する。
-    1. 以下2つのファイルについて、ファイル名を変更した後、vimのインストールフォルダに配置する。
-        * .vimrc → _vimrc
-        * .gvimrc → _gvimrc
+1. ダウンロードしたZIPファイルを解凍する。
+1. gitを使用する場合、「.gitconfig」を「C:\Users\ユーザ名」配下に配置する。
+1. vimを使用する場合、以下2つのファイルについて、ファイル名を変更した後、vimのインストールフォルダに配置する（前述した「.gitconfig」の配置も必要）。
+    * .vimrc → _vimrc
+    * .gvimrc → _gvimrc
