@@ -2,7 +2,7 @@
 
 ## インストール手順
 
-### macOS または Linuxの場合
+### Linuxの場合
 
 ```
 $ cd ${HOME}

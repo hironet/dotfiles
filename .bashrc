@@ -13,17 +13,8 @@ function set_prompt_color() {
 }
 
 function set_alias() {
-    case $(uname) in
-        'Darwin')
-            alias la='ls -AFG'
-            alias ll='ls -AFGl'
-            ;;
-        'Linux')
-            alias la='ls -AF'
-            alias ll='ls -AFl'
-            ;;
-    esac
-
+    alias la='ls -AF'
+    alias ll='ls -AFl'
     alias cp='cp -i'
     alias mv='mv -i'
     alias rm='rm -i'
