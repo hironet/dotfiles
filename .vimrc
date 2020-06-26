@@ -3,7 +3,7 @@ if &compatible
 endif
 
 if has('win32')
-  let s:dein_dir = 'C:\bin\dein'
+  let s:dein_dir = 'C:\tools\vim\dein'
   let s:dein_repo_dir = s:dein_dir . '\repos\github.com\Shougo\dein.vim'
 else
   let s:dein_dir = expand('~/.cache/dein')
