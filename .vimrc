@@ -26,14 +26,7 @@ if dein#load_state(s:dein_dir)
   endif
 
   call dein#add('tomasr/molokai')
-  call dein#add('scrooloose/nerdtree')
-  call dein#add('Yggdroot/indentLine')
   call dein#add('bronson/vim-trailing-whitespace')
-  call dein#add('tpope/vim-endwise')
-
-  " for Markdown
-  call dein#add('kannokanno/previm')
-  call dein#add('tyru/open-browser.vim')
 
   call dein#end()
   call dein#save_state()
@@ -78,15 +71,6 @@ set statusline=%<%f\ %m%r%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l/%L,%v
 set ignorecase
 set nowrapscan
 set clipboard=unnamed
-
-" for scrooloose/nerdtree
-nnoremap <silent><C-e> :NERDTreeToggle<CR>
-
-" for tyru/open-browser.vim
-nnoremap <silent><C-m> :PrevimOpen<CR>
-
-" for Yggdroot/indentLine
-let g:indentLine_setColors = 100
 
 colorscheme molokai
 filetype plugin indent on
