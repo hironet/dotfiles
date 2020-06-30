@@ -2,40 +2,6 @@ if &compatible
   set nocompatible
 endif
 
-if has('win32')
-  let s:dein_dir = 'C:\tools\vim\dein'
-  let s:dein_repo_dir = s:dein_dir . '\repos\github.com\Shougo\dein.vim'
-else
-  let s:dein_dir = expand('~/.cache/dein')
-  let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
-endif
-
-if !isdirectory(s:dein_repo_dir)
-  call system('git clone https://github.com/Shougo/dein.vim ' . shellescape(s:dein_repo_dir))
-endif
-let &runtimepath = s:dein_repo_dir .",". &runtimepath
-
-if dein#load_state(s:dein_dir)
-  call dein#begin(s:dein_dir)
-
-  call dein#add(s:dein_repo_dir)
-  call dein#add('Shougo/deoplete.nvim')
-  if !has('nvim')
-    call dein#add('roxma/nvim-yarp')
-    call dein#add('roxma/vim-hug-neovim-rpc')
-  endif
-
-  call dein#add('tomasr/molokai')
-  call dein#add('bronson/vim-trailing-whitespace')
-
-  call dein#end()
-  call dein#save_state()
-endif
-
-if dein#check_install()
-  call dein#install()
-endif
-
 set nobackup
 set noswapfile
 set noundofile
@@ -72,6 +38,6 @@ set ignorecase
 set nowrapscan
 set clipboard=unnamed
 
-colorscheme molokai
+colorscheme evening
 filetype plugin indent on
 syntax enable
