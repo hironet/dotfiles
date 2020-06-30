@@ -38,6 +38,6 @@ set ignorecase
 set nowrapscan
 set clipboard=unnamed
 
-colorscheme evening
+colorscheme koehler
 filetype plugin indent on
 syntax enable
