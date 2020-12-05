@@ -6,8 +6,16 @@ else
     PROMPT='%F{blue}%n%f@%F{green}%m%f %1~ %# '
 fi
 
-alias la='ls -AFG'
-alias ll='ls -AFGl'
+case $(uname) in
+    'Darwin')
+        alias la='ls -AFG'
+        alias ll='ls -AFGl'
+        ;;
+    'Linux')
+        alias la='ls -AF'
+        alias ll='ls -AFl'
+        ;;
+esac
 alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
